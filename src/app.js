@@ -47,6 +47,40 @@
     }, { threshold: .4 }).observe(cpt);
   }
 
+
+  // En-tête transparent sur la bannière, plein après défilement
+  var over = d.querySelector('.top--over');
+  if (over) {
+    var tick = function () { over.classList.toggle('is-scrolled', window.scrollY > 40); };
+    tick(); window.addEventListener('scroll', tick, { passive: true });
+  }
+
+  // Menu de réservation : se referme au clic ailleurs ou à Échap
+  d.addEventListener('click', function (e) {
+    d.querySelectorAll('details.book[open]').forEach(function (x) { if (!x.contains(e.target)) x.open = false; });
+  });
+  d.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') d.querySelectorAll('details.book[open]').forEach(function (x) { x.open = false; });
+  });
+
+  // Parallaxe douce des photos (désactivée si l'utilisateur préfère moins de mouvement)
+  var par = d.querySelectorAll('[data-parallax]');
+  if (par.length && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    var busy = false;
+    var run = function () {
+      busy = false;
+      var vh = window.innerHeight;
+      par.forEach(function (img) {
+        var box = img.parentElement.getBoundingClientRect();
+        if (box.bottom < -50 || box.top > vh + 50) return;
+        var k = (box.top + box.height / 2 - vh / 2) / vh;
+        img.style.transform = 'translate3d(0,' + (k * -7).toFixed(2) + '%,0)';
+      });
+    };
+    window.addEventListener('scroll', function () { if (!busy) { busy = true; requestAnimationFrame(run); } }, { passive: true });
+    run();
+  }
+
   // Suivi des clics : envoie un évènement à GA4 / GTM s'ils sont installés.
   // Important : un clic Planity = un clic sortant, PAS une réservation confirmée.
   window.dataLayer = window.dataLayer || [];
