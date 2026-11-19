@@ -1,0 +1,108 @@
+{
+  "_lisezmoi": "Donnees centrales des 4 etablissements (NAP, liens, horaires). Source de reference : fiches Google relevees le 19/11/2026. Toute modification ici se repercute sur les 5 sites au prochain build.",
+  "groupe": {
+    "nom": "Maison Beauté Rouen",
+    "slug": "groupe",
+    "domaine": "https://www.maison-beaute-rouen.fr",
+    "description": "Maison Beauté Rouen réunit quatre établissements spécialisés de la rue Lafayette et de la rue Pavée, sur la rive gauche de Rouen : Le Continent, Ô Les Femmes, Beauté Fatale et B-Zen.",
+    "ville": "Rouen",
+    "experience": "plus de 27 ans d'expérience"
+  },
+  "etablissements": [
+    {
+      "slug": "le-continent",
+      "nom": "Le Continent",
+      "nom_long": "Le Continent, coiffeur homme et barber à Rouen",
+      "domaine": "https://www.lecontinent87.fr",
+      "metier": "Coiffeur homme et barber",
+      "type_schema": "HairSalon",
+      "adresse": { "rue": "87 rue Lafayette", "cp": "76100", "ville": "Rouen" },
+      "geo": { "lat": 49.43237, "lng": 1.08935 },
+      "telephone": "09 82 12 81 77",
+      "telephone_e164": "+33982128177",
+      "telephone_note": "Numéro de la fiche Google et de PagesJaunes. Le site actuel affiche le 06 56 71 32 43 : à harmoniser.",
+      "horaires": [
+        { "jours": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "label": "Lundi au samedi", "ouvre": "10:00", "ferme": "22:30" },
+        { "jours": ["Sunday"], "label": "Dimanche", "ouvre": "12:00", "ferme": "20:00" }
+      ],
+      "horaires_source": "Planity, relevé le 19/11/2026 (PagesJaunes et le site actuel affichent d'autres horaires : à valider par le client)",
+      "planity": "https://www.planity.com/le-continent-76100-rouen",
+      "google_place_id": "ChIJ3U12U6Xf4EcRgQR1ELTh70s",
+      "pagesjaunes": "https://www.pagesjaunes.fr/pros/64914398",
+      "facebook": "https://www.facebook.com/profile.php?id=100076708260491",
+      "instagram": null,
+      "logo": "https://le-de.cdn-website.com/c09de1074a214887af1b0889bd73d68a/dms3rep/multi/opt/Image--283-29-1920w.png",
+      "logo_fond": "sombre"
+    },
+    {
+      "slug": "o-les-femmes",
+      "nom": "Ô Les Femmes",
+      "nom_long": "Ô Les Femmes, salon de coiffure femme et afro à Rouen",
+      "domaine": "https://www.olesfemmes.fr",
+      "metier": "Coiffure femme, afro et tresses",
+      "type_schema": "HairSalon",
+      "adresse": { "rue": "113 rue Lafayette", "cp": "76100", "ville": "Rouen" },
+      "geo": { "lat": 49.431267, "lng": 1.087019 },
+      "telephone": "09 80 08 18 89",
+      "telephone_e164": "+33980081889",
+      "telephone_note": "Numéro de la fiche Google. Le site actuel affiche le 02 27 08 80 69 : à harmoniser.",
+      "horaires": [
+        { "jours": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "label": "Lundi au samedi", "ouvre": "10:00", "ferme": "19:00" }
+      ],
+      "horaires_source": "Planity, relevé le 19/11/2026 (le site actuel indique 20h30 : à valider)",
+      "planity": "https://www.planity.com/o-les-femmes-76100-rouen",
+      "google_place_id": "ChIJ_7Nyx-oShYIRjUmoCm4YmgQ",
+      "pagesjaunes": "https://www.pagesjaunes.fr/pros/64910109",
+      "facebook": "https://www.facebook.com/people/%C3%94-Les-femmes/100063791912116/",
+      "tiktok": "https://www.tiktok.com/@olesfemmes",
+      "logo": null
+    },
+    {
+      "slug": "beaute-fatale",
+      "nom": "Beauté Fatale",
+      "nom_long": "Beauté Fatale, salon de coiffure afro, locks et extensions à Rouen",
+      "domaine": "https://www.beautefatale-rouen.fr",
+      "metier": "Coiffure afro, locks, tissages et extensions",
+      "type_schema": "HairSalon",
+      "adresse": { "rue": "34 rue Pavée", "cp": "76100", "ville": "Rouen", "complement": "accès également au 106 rue Lafayette" },
+      "geo": { "lat": 49.431542, "lng": 1.087385 },
+      "telephone": "02 27 08 80 69",
+      "telephone_e164": "+33227088069",
+      "horaires": [
+        { "jours": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "label": "Lundi au samedi", "ouvre": "10:00", "ferme": "19:00" }
+      ],
+      "horaires_source": "Planity, relevé le 19/11/2026 (le site actuel indique 20h30 : à valider)",
+      "planity": "https://www.planity.com/beaute-fatale-76100-rouen-yd3",
+      "google_place_id": "ChIJ1Y-52IDf4EcR1IRBYzWZfMo",
+      "pagesjaunes": "https://www.pagesjaunes.fr/pros/61081507",
+      "facebook": "https://www.facebook.com/profile.php?id=100076708260491",
+      "logo": "https://www.beautefatale-rouen.fr/wp-content/uploads/2024/10/A-New-Design-Fait-avec-PosterMyWall-5-e1723540661534-removebg-preview.webp",
+      "logo_fond": "sombre"
+    },
+    {
+      "slug": "b-zen",
+      "nom": "B-Zen",
+      "nom_long": "B-Zen, onglerie et institut de beauté à Rouen",
+      "domaine": "https://www.onglerie-rouen.fr",
+      "metier": "Onglerie, manucure et beauté des pieds",
+      "type_schema": "NailSalon",
+      "adresse": { "rue": "113 rue Lafayette", "cp": "76100", "ville": "Rouen" },
+      "geo": { "lat": 49.4326973, "lng": 1.0893162 },
+      "telephone": "02 27 08 80 69",
+      "telephone_e164": "+33227088069",
+      "telephone_note": "Numéro de la fiche Google (identique à Beauté Fatale). Le site actuel affiche le 06 56 71 32 43 : à harmoniser.",
+      "horaires": [
+        { "jours": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "label": "Lundi au samedi", "ouvre": "10:00", "ferme": "19:00" }
+      ],
+      "horaires_source": "Planity, PagesJaunes et site actuel concordants, relevé le 19/11/2026",
+      "planity": "https://www.planity.com/b-zen-76100-rouen-7ka",
+      "google_place_id": "ChIJ7wMN-t7f4EcR5_5vO9qqmPc",
+      "pagesjaunes": "https://www.pagesjaunes.fr/pros/64911287",
+      "facebook": "https://www.facebook.com/profile.php?id=100087157059891",
+      "instagram": "https://www.instagram.com/bzen.113.76100/",
+      "tiktok": "https://www.tiktok.com/@www.bzen113.com",
+      "logo": "https://files.sbcdnsb.com/images/Qyg-LbODqfkEZzZxX3MyIQ/content/1785770382/3295114/b4d061e90290b4e2d3bb20231031-2152691-1trzxoc.png",
+      "logo_fond": "clair"
+    }
+  ]
+}

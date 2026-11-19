@@ -1,0 +1,301 @@
+{
+  "_lisezmoi": "Fichier central des avis. Mettre a jour les champs 'note', 'nombre' et 'releve_le' de chaque plateforme, puis pousser sur GitHub : le site se reconstruit seul. Ne jamais saisir une valeur non constatee sur la plateforme. Google peut etre actualise automatiquement par la fonction /api/avis si la cle GOOGLE_PLACES_API_KEY est configuree dans Cloudflare.",
+  "derniere_verification": "2026-11-19",
+  "etablissements": {
+    "le-continent": {
+      "google": {
+        "note": 4.9,
+        "nombre": 354,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "place_id": "ChIJ3U12U6Xf4EcRgQR1ELTh70s"
+      },
+      "pagesjaunes": {
+        "note": 5.0,
+        "nombre": 1,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.pagesjaunes.fr/pros/64914398#ancreBlocAvis"
+      },
+      "planity": {
+        "note": 1.0,
+        "nombre": 1,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.planity.com/le-continent-76100-rouen"
+      }
+    },
+    "o-les-femmes": {
+      "google": {
+        "note": 4.8,
+        "nombre": 318,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "place_id": "ChIJ_7Nyx-oShYIRjUmoCm4YmgQ"
+      },
+      "pagesjaunes": {
+        "note": 5.0,
+        "nombre": 1,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.pagesjaunes.fr/pros/64910109#ancreBlocAvis"
+      },
+      "planity": {
+        "note": 4.6,
+        "nombre": 5,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.planity.com/o-les-femmes-76100-rouen"
+      }
+    },
+    "beaute-fatale": {
+      "google": {
+        "note": 4.8,
+        "nombre": 817,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "place_id": "ChIJ1Y-52IDf4EcR1IRBYzWZfMo"
+      },
+      "pagesjaunes": {
+        "note": 4.7,
+        "nombre": 6,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.pagesjaunes.fr/pros/61081507#ancreBlocAvis"
+      },
+      "planity": {
+        "note": 4.4,
+        "nombre": 34,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.planity.com/beaute-fatale-76100-rouen-yd3"
+      }
+    },
+    "b-zen": {
+      "google": {
+        "note": 4.8,
+        "nombre": 357,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "place_id": "ChIJ7wMN-t7f4EcR5_5vO9qqmPc"
+      },
+      "pagesjaunes": {
+        "note": 5.0,
+        "nombre": 2,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.pagesjaunes.fr/pros/64911287#ancreBlocAvis"
+      },
+      "planity": {
+        "note": 4.3,
+        "nombre": 156,
+        "releve_le": "2026-11-19",
+        "methode": "manuel",
+        "url": "https://www.planity.com/b-zen-76100-rouen-7ka"
+      }
+    }
+  },
+  "temoignages": {
+    "le-continent": [
+      {
+        "auteur": "Mathieu P.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Venu ici pour la première fois, (je n'est pas les cheveux Afro) et que dire juste parfait très bon coiffeur professionnel travail propre, et fait les choses avec patience et minutie.",
+        "extrait": false
+      },
+      {
+        "auteur": "Magdalena G.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a un mois",
+        "texte": "Très bon accueil. Travail parfaitement réalisé. Mon fils est toujours très content de ses coupes",
+        "extrait": false
+      },
+      {
+        "auteur": "Ibrahim D.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 4 semaines",
+        "texte": "Tres bon coiffeur, a l’écoute, tout s’est bien passé je recommande",
+        "extrait": false
+      },
+      {
+        "auteur": "Laura D.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Très bien accueilli peu de temps d’attente, mes enfants ont été très bien coiffés. Je suis satisfaite, j’y reviendrai. Merci",
+        "extrait": false
+      },
+      {
+        "auteur": "Client PagesJaunes",
+        "plateforme": "pagesjaunes",
+        "note": 5,
+        "date": "14 mai 2026",
+        "texte": "Je recommande très bon coiffeur",
+        "extrait": false
+      },
+      {
+        "auteur": "Adam D.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 4 mois",
+        "texte": "C’est l’un des meilleurs coiffeur que j’ai jamais vue à Rouen venez faire un tour les gas",
+        "extrait": false
+      }
+    ],
+    "o-les-femmes": [
+      {
+        "auteur": "Tiphanie L.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Accueil chaleureux, très gentille est a l'écoute de ce que je demandé. Je suis ravie des mes tresse avec les rajouts. Merci infiniment je reviendrai 😊",
+        "extrait": false
+      },
+      {
+        "auteur": "Soledade A.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a un mois",
+        "texte": "Cela fait des années que je vais dans ce salon, l'expérience est juste géniale a chaque fois. J'y retourne avec ma famille, nous ressortons a chaque fois ravie de nos coiffures. Un grand merci aux filles et a la patronne Véronique pour qui j'ai beaucoup de respect.",
+        "extrait": false
+      },
+      {
+        "auteur": "Cliente Planity",
+        "plateforme": "planity",
+        "note": 5,
+        "date": "16 mai 2026",
+        "texte": "Que dire a part GÉNIAL. Merci encore.",
+        "extrait": false
+      },
+      {
+        "auteur": "Lolo W.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 4 mois",
+        "texte": "Personne agréable vous propose café ..et qui gère leur travaille avec des cheveux courts elle a qu me faire des tresses collés long et ça tiens je recommande oh les femmes",
+        "extrait": false
+      },
+      {
+        "auteur": "Barbz F.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 8 mois",
+        "texte": "Un accueil très chaleureux et une prestation irréprochable. Salon très professionnel, j’y reviendrai !",
+        "extrait": false
+      },
+      {
+        "auteur": "Merveille A.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 3 semaines",
+        "texte": "Arrivée sans RDV à une heure de la fermeture. Très bon accueil, et très professionnelle.",
+        "extrait": false
+      }
+    ],
+    "beaute-fatale": [
+      {
+        "auteur": "Prisc I.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 5 mois",
+        "texte": "Venue aujourd'hui pour des nattes collées américaine . Bon accueil. La patronne prend bien le temps d'écouter ce qu'on veut . Gentille et a l'écoute je reviendrai . Rapport qualité prix plus que correct . Merci",
+        "extrait": false
+      },
+      {
+        "auteur": "Doriane B.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Vraiment top, j’ai eu un rdv hyper vite. Le personnel et la patronne sont super accueillants et agréable. Je suis trop satisfaite de coiffure",
+        "extrait": false
+      },
+      {
+        "auteur": "Anais Y.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 4 mois",
+        "texte": "Bravo à la coiffeuse Blandine, je ne suis jamais déçu, peu importe la coiffure elle gère totalement, ma fille aussi très contente de ces vanilles! Je recommande",
+        "extrait": false
+      },
+      {
+        "auteur": "Sophie",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Nous sommes venues ce week-end. Très bien accueillies et surtout très bien coiffée ! Des professionnels à l'écoute et de bons conseils. Je recommande !",
+        "extrait": false
+      },
+      {
+        "auteur": "Tidiany Z.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 5 mois",
+        "texte": "Tout est parfait de l’accueil à la coiffure. Le salon est propre, le personnel est parfait. Je suis un habitué depuis plusieurs années maintenant. Je recommande !",
+        "extrait": false
+      },
+      {
+        "auteur": "Doxa M.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 6 mois",
+        "texte": "Que ce soit pour les femmes ou les hommes tous les types de coiffure sont faits Si vous voulez les tresses, tout ce que vous voulez, et je vous le recommande franchement",
+        "extrait": true
+      }
+    ],
+    "b-zen": [
+      {
+        "auteur": "Aïssata T.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 4 mois",
+        "texte": "Pose de capsules réalisée avec Véronique, très belle expérience ! ✨ Elle est professionnelle, passionnée et douce. Elle saura également vous conseiller sur la pose qui sublimera vos ongles et mettra vos mains en valeur. Je la recommande sans hésitation !",
+        "extrait": false
+      },
+      {
+        "auteur": "Roza D.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 mois",
+        "texte": "Très bon accueil ! La gérante et son équipe sont très professionnelles et adorables. J’ai fait une manucure et une pédicure, et je suis vraiment contente du résultat. 🥰",
+        "extrait": false
+      },
+      {
+        "auteur": "Cliente Planity",
+        "plateforme": "planity",
+        "note": 5,
+        "date": "2 novembre 2026",
+        "texte": "Mes ongles sont absolument impeccables, je n'ai trouvé aucun défaut",
+        "extrait": false
+      },
+      {
+        "auteur": "Efigenie M.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 3 semaines",
+        "texte": "Franchement je recommande car j'ai eu une belle expérience. La dame est très douce, méticuleuse et professionnelle. J'ai eu la pose que je voulais. Big up à toute l'équipe.",
+        "extrait": false
+      },
+      {
+        "auteur": "Julie U.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 2 semaines",
+        "texte": "Le travail est très bien fait L'accueil est super Le salon est très joli et très propre L'ambiance est cosy",
+        "extrait": false
+      },
+      {
+        "auteur": "Fabienne B.",
+        "plateforme": "google",
+        "note": 5,
+        "date": "il y a 3 semaines",
+        "texte": "Accueil superb agréable,travaille très soigné. Je recommande fortement.",
+        "extrait": false
+      }
+    ]
+  },
+  "_temoignages": "Textes recopies tels quels depuis la plateforme d'origine (orthographe d'origine conservee). 'date' = date affichee par la plateforme au moment du releve (derniere_verification). Nom affiche : prenom + initiale. 'extrait': true = avis raccourci (marque par ...)."
+}
