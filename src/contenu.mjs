@@ -2,6 +2,7 @@
 const D = 'https://le-de.cdn-website.com/c09de1074a214887af1b0889bd73d68a/dms3rep/multi/opt/';
 const W = 'https://www.beautefatale-rouen.fr/wp-content/uploads/';
 const O = (p) => `https://files.sbcdnsb.com/images/YkbzvHeq4gxQhRzv4BqtkA/content/${p.replace('/2000/', '/1000/')}`;
+const P = (id, w = 1400) => `https://mms.cdn.global.prodsharedsvc.planityapp.com/planity/image/upload/c_limit,w_${w},f_auto/${id}`;
 const Z = (p) => `https://files.sbcdnsb.com/images/Qyg-LbODqfkEZzZxX3MyIQ/content/${p}`;
 
 export const SOURCE_TARIFS = 'Tarifs relevés sur Planity le 19 novembre 2026. Le tarif final dépend de la longueur, de la densité et du travail demandé : il est confirmé au salon.';
@@ -11,9 +12,9 @@ export const marques = {
     theme: {
       fonts: 'family=Big+Shoulders+Display:wght@600;800&family=Inter:wght@400;500;600',
       display: "'Big Shoulders Display', Impact, sans-serif", body: "'Inter', system-ui, sans-serif",
-      bg: '#0f0f10', surface: '#18181a', surface2: '#202023', text: '#eceae6', muted: '#a3a09a',
-      accent: '#c8935a', accentText: '#120d08', line: 'rgba(255,255,255,.09)', dark: true,
-      titleCase: 'uppercase', titleTrack: '.02em', radius: '4px'
+      bg: '#0d0d0e', surface: '#161618', surface2: '#1f1f22', text: '#ece9e3', muted: '#a3a09a',
+      accent: '#c2bdb2', accentText: '#0d0d0e', line: 'rgba(236,233,227,.12)', dark: true,
+      titleCase: 'uppercase', titleTrack: '.02em', radius: '0px'
     },
     accroche: 'Barber & coiffeur homme',
     seo: { title: 'Coiffeur homme et barber à Rouen, dégradés | Le Continent', description: 'Le Continent, coiffeur homme et barber au 87 rue Lafayette à Rouen : dégradés, dégradé à blanc, barbe, coupes enfants. Réservation en ligne sur Planity.' },
@@ -105,11 +106,11 @@ export const marques = {
 
   'o-les-femmes': {
     theme: {
-      fonts: 'family=Fraunces:opsz,wght@9..144,400;9..144,600&family=DM+Sans:wght@400;500;700',
-      display: "'Fraunces', Georgia, serif", body: "'DM Sans', system-ui, sans-serif",
-      bg: '#fbf6f1', surface: '#ffffff', surface2: '#f3e7dd', text: '#3a2a24', muted: '#7d6a61',
-      accent: '#b5654a', accentText: '#ffffff', line: 'rgba(58,42,36,.12)', dark: false,
-      titleCase: 'none', titleTrack: '-.01em', radius: '18px'
+      fonts: 'family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500;700',
+      display: "'Playfair Display', Georgia, serif", body: "'DM Sans', system-ui, sans-serif",
+      bg: '#f4ebe3', surface: '#fbf6f1', surface2: '#ead9cd', text: '#3b2a22', muted: '#7a655a',
+      accent: '#4a3228', accentText: '#fbf6f1', gold: '#9c7a45', line: 'rgba(59,42,34,.14)', dark: false,
+      titleCase: 'none', titleTrack: '-.01em', radius: '0px'
     },
     accroche: 'Coiffure femme · tresses · perruques',
     seo: { title: 'Coiffeur femme et tresses africaines à Rouen | Ô Les Femmes', description: 'Ô Les Femmes, 113 rue Lafayette à Rouen : tresses, knotless, boho braids, perruques, tissages, coiffure de mariage, lissage. Tous types de cheveux. RDV Planity.' },
@@ -237,11 +238,11 @@ export const marques = {
 
   'beaute-fatale': {
     theme: {
-      fonts: 'family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600&family=Jost:wght@400;500;600',
+      fonts: 'family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Jost:wght@400;500;600',
       display: "'Bodoni Moda', Didot, Georgia, serif", body: "'Jost', system-ui, sans-serif",
-      bg: '#16110f', surface: '#1f1916', surface2: '#2a211d', text: '#f2e9e2', muted: '#b4a49a',
-      accent: '#d6a990', accentText: '#1a120e', line: 'rgba(242,233,226,.1)', dark: true,
-      titleCase: 'none', titleTrack: '0', radius: '2px'
+      bg: '#1a110c', surface: '#241811', surface2: '#2f2017', text: '#f1e6da', muted: '#b59f8e',
+      accent: '#c8814f', accentText: '#1a0f09', line: 'rgba(241,230,218,.12)', dark: true,
+      titleCase: 'none', titleTrack: '0', radius: '0px'
     },
     accroche: 'Coiffure afro · locks · extensions',
     seo: { title: 'Coiffure afro, locks et tissage à Rouen | Beauté Fatale', description: 'Beauté Fatale, 34 rue Pavée à Rouen : locks, tresses, tissages, extensions kératine, lissage, maquillage. 817 avis Google, note 4,8/5. Réservez sur Planity.' },
@@ -365,9 +366,9 @@ export const marques = {
     theme: {
       fonts: 'family=Marcellus&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700',
       display: "'Marcellus', Georgia, serif", body: "'Nunito Sans', system-ui, sans-serif",
-      bg: '#fcfaf7', surface: '#ffffff', surface2: '#f1ecf5', text: '#2c2533', muted: '#746a7c',
-      accent: '#7d5a9e', accentText: '#ffffff', gold: '#b38b4d', line: 'rgba(44,37,51,.1)', dark: false,
-      titleCase: 'none', titleTrack: '.01em', radius: '24px'
+      bg: '#f6f0e8', surface: '#fffdf9', surface2: '#ece0d6', text: '#3a322d', muted: '#7d716a',
+      accent: '#6f5f55', accentText: '#fffdf9', gold: '#9c7a45', line: 'rgba(58,50,45,.12)', dark: false,
+      titleCase: 'none', titleTrack: '.01em', radius: '0px'
     },
     accroche: 'Onglerie · manucure · beauté des pieds',
     seo: { title: 'Onglerie à Rouen : pose gel, semi-permanent | B-Zen', description: 'B-Zen, onglerie au 113 rue Lafayette à Rouen : pose gel, capsules, vernis semi-permanent, nail art, beauté des pieds. Note 4,8/5 sur 357 avis Google.' },
@@ -375,7 +376,7 @@ export const marques = {
       h1: 'Onglerie et prothésiste ongulaire à Rouen',
       kicker: '113 rue Lafayette · Rive gauche',
       lead: 'Pose gel, capsules, vernis semi-permanent, nail art et soins des pieds : chez B-Zen, chaque pose est travaillée avec minutie, dans un institut cosy avec fauteuils de massage pour les pieds, thé et café offerts.',
-      image: Z('1699629500/3311376/900/100011951920231012-3749184-yg9f03.jpeg'), imageAlt: 'Ongles longs nude réalisés à l’onglerie B-Zen à Rouen'
+      image: P('lj1eu0xqdyq8fzww8wjc'), imageAlt: 'Mains manucurées nude avec nail art doré sur fourrure blanche, onglerie B-Zen à Rouen'
     },
     atouts: [
       ['357 avis Google', 'Note moyenne de 4,8/5, relevée le 19/11/2026.'],
@@ -413,12 +414,15 @@ export const marques = {
       ['Paillettes et strass', '30 min', '5 € par main']
     ],
     galerie: [
-      [Z('1700183669/3295118/900/onglerie.jpeg'), 'Ongles nude amande réalisés chez B-Zen à Rouen'],
-      [Z('1699629486/3311374/900/100013690020231012-3749184-x0f65u.jpeg'), 'Pose gel blanche longue, onglerie B-Zen'],
-      [Z('1699637369/3311379/900/100012436520231012-3749184-1yxkxvx.jpeg'), 'Nail art orange et doré réalisé à Rouen'],
-      [Z('1699629548/3311380/900/100013736320231012-3749057-1fmsbyu.jpeg'), 'Ongles courts naturels avec nail art discret'],
-      [Z('1699629511/3311378/900/100012347020231012-3749184-c7rdfh.jpeg'), 'Pose gel nacrée, onglerie B-Zen Rouen'],
-      [Z('1701266395/3311383/900/100009901620231012-3749184-172zcjt.jpeg'), 'Réalisation de l’institut B-Zen']
+      [P('ld7kqb73iddjio6zhi7x'), 'Ongles nude rosé amande sur fourrure blanche, onglerie B-Zen à Rouen'],
+      [P('c7m8iv06iqq0n4sawksw'), 'French blanche avec nœuds 3D roses, pose gel B-Zen à Rouen'],
+      [P('rgg6mq5jqd6sgto0ocvs'), 'Vernis rouge brillant avec nail art cœur, B-Zen à Rouen'],
+      [P('zamgowhuhtescj54fsii'), 'Ongles dégradé nude et touches dorées, B-Zen à Rouen'],
+      [P('kingvvm9ftyj8hmllujt'), 'Ongles roses avec nœud, strass et motif léopard, B-Zen à Rouen'],
+      [P('zozwi6jtuoicr0umsaji'), 'French nacrée avec strass, pose gel B-Zen à Rouen'],
+      [P('dthn2jhxer5lktgsh5iw'), 'Ongles bordeaux mat avec détails nail art, B-Zen à Rouen'],
+      [P('rwv6okyrz5gygubzsbd5'), 'Façade de l’institut B-Zen, rue Lafayette à Rouen'],
+      [P('ig3mfppsmcyznur7qehu'), 'Le salon B-Zen : postes de manucure et équipe au travail, Rouen']
     ],
     equipe: ['Véronique', 'Amandine', 'Princesse', 'Angela', 'Fanta', 'Mbintou', 'Blandine'],
     faq: [
@@ -435,7 +439,7 @@ export const marques = {
         description: 'Pose complète gel, Gel X, capsules et remplissage au 113 rue Lafayette à Rouen : de 45 à 70 €. Nail art dès 5 €. Onglerie B-Zen, réservation Planity.',
         h1: 'Pose gel, capsules et Gel X à Rouen',
         fil: 'Pose gel',
-        image: [Z('1699629486/3311374/900/100013690020231012-3749184-x0f65u.jpeg'), 'Pose gel longue réalisée chez B-Zen à Rouen'],
+        image: [P('c7m8iv06iqq0n4sawksw'), 'Pose gel longue réalisée chez B-Zen à Rouen'],
         intro: 'La pose gel est une technique de prothésie ongulaire qui construit un ongle solide en gel, sur l’ongle naturel ou avec une capsule pour l’allonger. Chez B-Zen, 113 rue Lafayette à Rouen, la pose complète gel coûte de 50 à 60 € selon la taille et le remplissage de 45 à 55 €.',
         sections: [
           ['Gel, capsules ou Gel X ?', 'Le gainage renforce l’ongle naturel sans l’allonger. Les capsules ajoutent de la longueur avant d’être recouvertes de gel. Le Gel X est une capsule en gel souple, posée entière, plus rapide et plus légère (50 €, environ 1h).'],
@@ -455,7 +459,7 @@ export const marques = {
         description: 'Vernis semi-permanent renforcé, manucure, dépose et nouvelle pose, mains et pieds au 113 rue Lafayette à Rouen. Dès 35 €. Onglerie B-Zen.',
         h1: 'Vernis semi-permanent et manucure à Rouen',
         fil: 'Semi-permanent',
-        image: [Z('1699629548/3311380/900/100013736320231012-3749057-1fmsbyu.jpeg'), 'Manucure semi-permanent réalisée chez B-Zen à Rouen'],
+        image: [P('zozwi6jtuoicr0umsaji'), 'Manucure semi-permanent réalisée chez B-Zen à Rouen'],
         intro: 'Le vernis semi-permanent est un vernis gel qui sèche sous lampe UV ou LED et tient deux à trois semaines sans s’écailler. Chez B-Zen, à Rouen, la pose renforcée coûte 35 €, la dépose avec nouvelle pose 45 € et la formule mains et pieds 70 €.',
         sections: [
           ['Semi-permanent ou vernis classique ?', 'Le vernis classique sèche à l’air et s’écaille en quelques jours. Le semi-permanent reste brillant deux à trois semaines et protège légèrement l’ongle.'],
@@ -474,7 +478,7 @@ export const marques = {
         description: 'Semi-permanent pieds, pose gel pieds et BBL Toes au 113 rue Lafayette à Rouen, dans des fauteuils de massage. De 45 à 60 €. Onglerie B-Zen.',
         h1: 'Beauté des pieds et pédicure à Rouen',
         fil: 'Beauté des pieds',
-        image: [Z('1699629511/3311378/900/100012347020231012-3749184-c7rdfh.jpeg'), 'Réalisation de l’onglerie B-Zen à Rouen'],
+        image: [P('rgg6mq5jqd6sgto0ocvs'), 'Réalisation de l’onglerie B-Zen à Rouen'],
         intro: 'La beauté des pieds regroupe la mise en beauté des ongles de pieds : vernis semi-permanent, pose en gel ou restructuration. Chez B-Zen, à Rouen, elle se fait dans des fauteuils de massage, de 45 € pour une pose gel à 60 € pour un BBL Toes.',
         sections: [
           ['Qu’est-ce que le BBL Toes ?', 'C’est une restructuration des ongles de pieds à l’acrygel, suivie d’un vernis semi-permanent. Elle redonne une forme harmonieuse aux ongles abîmés ou courts (60 €, environ 1h40).'],
