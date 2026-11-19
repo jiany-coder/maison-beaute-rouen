@@ -199,3 +199,19 @@ body.b-groupe{background:var(--nuit);color:var(--ivoire)}
  .b-groupe .brand span{font-size:.95rem;letter-spacing:.14em}
 }
 @media (prefers-reduced-motion:reduce){.gh__p,.gh__intro,.band__in,.gh__scroll{animation:none!important}.gh__p img{transform:none}}
+
+/* ---------- Corrections V1.1 ---------- */
+.b-groupe .top.top--over.has-pp{top:32px}
+.b-groupe .top.top--over.has-pp.is-scrolled{top:0}
+.b-groupe .prepub{position:relative;z-index:70}
+.gh__tag{font-size:clamp(2.6rem,min(6.6vw,11.5vh),6.8rem)}
+.gc__n{font-size:clamp(5rem,14vw,14rem)}
+.gc__plats .num,.gm__n,.gh__n,.gx__nums b{font-variant-numeric:lining-nums}
+.gt .temoin{justify-content:flex-start;gap:0}
+.gt .temoin footer{margin-top:1.6rem}
+@media (max-width:820px){
+ .gh{display:flex;flex-direction:column}
+ .gh__intro{order:-1}
+ .gh__panels{order:0}
+ .b-groupe .top.top--over.has-pp{top:0}
+}
