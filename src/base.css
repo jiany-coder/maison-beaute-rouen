@@ -130,7 +130,8 @@ p{margin:0 0 1em}
 .avis__methode{font-size:.78rem;color:var(--c-muted);line-height:1.5;margin:1rem 0 0}
 .avis__cta{display:grid;gap:.6rem}
 .avis__cta .btn{width:100%}
-@media (max-width:900px){.avis{grid-template-columns:1fr}.avis__total{position:static}}
+@media (max-width:900px){.avis{grid-template-columns:minmax(0,1fr)}.avis>*{min-width:0}.avis__total{position:static}}
+@media (max-width:600px){small{font-size:max(.75rem,.83em)}.temoin footer a,.plat a{min-height:36px;display:inline-flex;align-items:center}}
 
 .carousel{position:relative}
 .track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 1.1rem)/2);gap:1.1rem;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:.5rem;overscroll-behavior-x:contain}
