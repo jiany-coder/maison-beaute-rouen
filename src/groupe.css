@@ -247,3 +247,13 @@ body.b-groupe{background:#f3ede2;color:#1b1611}
 .b-groupe .gr .link{background:none;color:#c9a45c}
 .b-groupe .top .btn--book{--bg:#c9a45c;--fg:#0c0a08}
 .b-groupe .faq summary{color:#1b1611}
+/* ---------- V2.1 : mobile ---------- */
+@media (max-width:820px){
+ .b-groupe .nav{background:#0c0a08;border-bottom:1px solid rgba(239,230,214,.16);inset:64px 0 auto 0}
+ .b-groupe .nav a{color:#efe6d6;border-bottom-color:rgba(239,230,214,.16);font-size:.8rem}
+ .b-groupe .nav:not(.open){visibility:hidden}
+ .b-groupe .top .burger{color:#efe6d6;border-color:rgba(239,230,214,.4)}
+ .b-groupe .prepub{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:.68rem;padding:.4rem .8rem}
+ .b-groupe .top.top--over.has-pp{top:28px}
+ .b-groupe .top.top--over.has-pp.is-scrolled{top:0}
+}
