@@ -29,3 +29,4 @@
 @media(max-width:900px){.bz-tech{grid-template-columns:1fr 1fr}.bz-t:nth-child(odd){padding-left:0;border-left:0}.bz-hero__img{aspect-ratio:4/3}}
 @media(max-width:520px){.bz-tech{grid-template-columns:1fr}.bz-t,.bz-t+.bz-t{padding-left:0;border-left:0}}
 .b-b-zen .brand img{display:none}
+@media(max-width:900px){.bz-t figure{aspect-ratio:4/3}}
