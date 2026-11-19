@@ -27,7 +27,7 @@ export function makeMarqueHome(c) {
 <div class="sec__head reveal"><div><span class="kicker">${esc(m.accroche)}</span><h2 id="presta-t">La carte</h2></div><p>Prix et durées relevés sur notre page de réservation Planity.</p></div>
 <ol class="lc-menu">${m.services.map((s, i) => `<li class="reveal"><a href="${lien(s, base)}"><span class="lc-menu__n">0${i + 1}</span><span class="lc-menu__t"><strong>${esc(s.titre)}</strong><small>${esc(s.texte)}</small></span><span class="lc-menu__d">${esc(s.duree)}</span><span class="lc-menu__p">${esc(s.prix)}</span><span class="lc-menu__go">${I.arrow}</span></a></li>`).join('')}</ol>
 </div></section>`;
-  R['le-continent'] = (e, m) => `<section class="sec" id="realisations" aria-labelledby="real-t"><div class="wrap"><div class="sec__head reveal"><div><span class="kicker">Réalisations</span><h2 id="real-t">Le travail du salon</h2></div><p>Photos publiées par le salon. Survolez pour passer en couleur.</p></div></div>
+  R['le-continent'] = (e, m) => `<section class="sec" id="realisations" aria-labelledby="real-t"><div class="wrap"><div class="sec__head reveal"><div><span class="kicker">Réalisations</span><h2 id="real-t">Le travail du salon</h2></div><p>Photos publiées par le salon. Faites défiler.</p></div></div>
 <div class="lc-strip">${m.galerie.map(([src, alt]) => `<figure>${img(src, alt, 'loading="lazy" width="500" height="700"')}</figure>`).join('')}</div>
 ${m.equipe ? `<div class="wrap"><p class="muted" style="margin-top:1.6rem">L’équipe : ${m.equipe.map(esc).join(', ')}.</p></div>` : ''}</section>`;
 
