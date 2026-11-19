@@ -51,6 +51,7 @@ p{margin:0 0 1em}
   .nav{position:fixed;inset:74px 0 auto 0;flex-direction:column;gap:0;background:var(--c-bg);border-bottom:1px solid var(--c-line);padding:.5rem 1.25rem 1.25rem;transform:translateY(-120%);transition:transform .35s ease;margin:0}
   .nav a{padding:1rem 0;border-bottom:1px solid var(--c-line);font-size:1.05rem;color:var(--c-text)}
   .nav.open{transform:none}
+  .nav:not(.open){visibility:hidden;transition:transform .35s ease,visibility 0s .35s}
   .burger{display:block}
   .top .btn--book{display:none}
   .brand img{height:40px}
