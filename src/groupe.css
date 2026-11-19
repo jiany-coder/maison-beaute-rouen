@@ -215,3 +215,35 @@ body.b-groupe{background:var(--nuit);color:var(--ivoire)}
  .gh__panels{order:0}
  .b-groupe .top.top--over.has-pp{top:0}
 }
+
+/* ---------- V2 : ivoire dominant, noir et champagne en accents ---------- */
+body.b-groupe{background:#f3ede2;color:#1b1611}
+.b-groupe .gc,.b-groupe .gm-sec,.b-groupe .gx{color:#1b1611}
+.b-groupe .gc .kicker,.b-groupe .gm-head .kicker,.b-groupe .gx .kicker,.b-groupe .sec .kicker{color:#8a6d2f}
+.b-groupe .gc em,.b-groupe .gm-head em,.b-groupe .gx em,.b-groupe .gr em{color:#8a6d2f}
+.gc__n{color:#8a6d2f}
+.gc__meta,.gc__plats .lbl,.gc__plats .sub,.gc__note,.tbl-avis thead th{color:rgba(27,22,17,.62)}
+.gc__note a,.gc summary{color:#6d5522}
+.gc__plats,.gc__plats>div,.gc__plats>div+div,.tbl-avis th,.tbl-avis td{border-color:rgba(27,22,17,.16)}
+.tbl-avis tfoot td{color:#6d5522}
+.gm-head p{color:rgba(27,22,17,.7)}
+.gm__img::after{box-shadow:inset 0 0 0 1px rgba(27,22,17,.12)}
+.gm__card{background:#14100b;color:#efe6d6;box-shadow:none;border-top:3px solid var(--k)}
+.gm__card h3,.gm__note strong{color:#f3ede2}
+.gm__card p,.gm__note,.gm__addr{color:rgba(239,230,214,.74)}
+.gm__metier{color:rgba(239,230,214,.6)}
+.gm__card .btn{--bg:#efe6d6;--fg:#14100b}
+.gm__card .btn--ghost{--bg:transparent;--fg:#efe6d6;border-color:rgba(239,230,214,.4)}
+.gm__card .btn--ghost:hover{--bg:#efe6d6;--fg:#14100b}
+.gx__p{color:rgba(27,22,17,.72)}
+.gx__nums{background:rgba(27,22,17,.16);border-color:rgba(27,22,17,.16)}
+.gx__nums div{background:#f3ede2}
+.gx__nums b{color:#8a6d2f}
+.gx__nums span{color:rgba(27,22,17,.62)}
+.b-groupe .gh,.b-groupe .band,.b-groupe .gt,.b-groupe .gr,.b-groupe .foot{--c-text:#efe6d6;--c-muted:#a89f90;--c-line:rgba(239,230,214,.16);--c-line-strong:rgba(239,230,214,.3);--c-bg:#0c0a08;color:#efe6d6}
+.b-groupe .gh .btn,.b-groupe .gr .link{--bg:#c9a45c;--fg:#0c0a08}
+.b-groupe .gh .btn--ghost{--bg:transparent;--fg:#efe6d6;border-color:rgba(239,230,214,.4)}
+.b-groupe .gh .btn--ghost:hover{--bg:#efe6d6;--fg:#0c0a08}
+.b-groupe .gr .link{background:none;color:#c9a45c}
+.b-groupe .top .btn--book{--bg:#c9a45c;--fg:#0c0a08}
+.b-groupe .faq summary{color:#1b1611}
