@@ -4,8 +4,8 @@ export function makeGroupe(c) {
 const GT = {
   fonts: 'family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Manrope:wght@300;400;500;600',
   display: "'Cormorant Garamond', Garamond, Georgia, serif", body: "'Manrope', system-ui, sans-serif",
-  bg: '#0b0a09', surface: '#13110f', surface2: '#1a1714', text: '#f3ece0', muted: '#a89f90',
-  accent: '#c9a45c', accentText: '#0b0a09', line: 'rgba(201,164,92,.16)', dark: true, titleCase: 'none', titleTrack: '0', radius: '2px'
+  bg: '#f3ede2', surface: '#fbf7ef', surface2: '#e9e0d0', text: '#1b1611', muted: '#6b5f4f',
+  accent: '#8a6d2f', accentText: '#ffffff', line: 'rgba(27,22,17,.14)', dark: false, titleCase: 'none', titleTrack: '0', radius: '2px'
 };
 const groupeCss = fs.readFileSync(path.join(ROOT, 'src/groupe.css'), 'utf8');
 
