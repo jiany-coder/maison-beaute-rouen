@@ -2,6 +2,7 @@
 // node build.mjs            -> dist/ (pré-publication : un seul domaine, sous-dossiers, noindex)
 // node build.mjs --prod     -> dist-prod/<site>/ (un dossier par domaine, prêt à déployer)
 import { makeGroupe } from './src/groupe.mjs';
+import { makeMarqueHome } from './src/marquehome.mjs';
 import fs from 'node:fs';
 import path from 'node:path';
 import { marques, SOURCE_TARIFS } from './src/contenu.mjs';
@@ -228,7 +229,8 @@ function buildMarque(e) {
   const m = marques[e.slug];
   const base = siteBase(e.slug);
   const pre = PROD ? e.slug + '/' : (base === '/' ? '' : e.slug + '/');
-  const css = themeVars(m.theme) + '\n' + baseCss + (m.theme.gold ? `\n.kicker{color:${m.theme.gold}}` : '');
+  const brandCss = fs.readFileSync(path.join(ROOT, `src/brand-${e.slug}.css`), 'utf8');
+  const css = themeVars(m.theme) + '\n' + baseCss + (m.theme.gold ? `\n.kicker{color:${m.theme.gold}}` : '') + '\n' + brandCss;
   write(pre + 'assets/site.css', css);
   write(pre + 'assets/app.js', appJs);
   const st = stats([e.slug]);
@@ -236,32 +238,16 @@ function buildMarque(e) {
 
   // Accueil
   const home = `${head({ title: m.seo.title, description: m.seo.description, slug: e.slug, p: '', theme: m.theme, css: base + 'assets/site.css', ogImage: m.hero.image, schema: [bizSchema, faqSchema(m.faq)] })}
-<body>
+<body class="b-${e.slug}">
 ${header(e, base, true)}
 <main id="main">
-<section class="hero"><div class="wrap hero__grid">
-<div class="reveal in">
-<span class="kicker">${esc(m.hero.kicker)}</span>
-<h1>${esc(m.hero.h1)}</h1>
-<p class="hero__lead">${esc(m.hero.lead)}</p>
-<div class="btns">
-<a class="btn" href="${e.planity}" target="_blank" rel="noopener" ${track('planity', e.slug, ' data-emplacement="hero"')}>${I.cal} Réserver en ligne</a>
-<a class="btn btn--ghost" href="tel:${e.telephone_e164}" ${track('telephone', e.slug, ' data-emplacement="hero"')}>${I.phone} ${e.telephone}</a>
-</div>
-<div class="hero__facts"><span>${I.pin}${esc(e.adresse.rue)}, Rouen</span><span>${I.clock}${esc(e.horaires[0].label)} ${e.horaires[0].ouvre.replace(':', 'h')} à ${e.horaires[0].ferme.replace(':', 'h')}</span><a href="#prestations" class="link">Découvrir nos prestations</a></div>
-</div>
-<div class="hero__media"><img src="${m.hero.image}" alt="${esc(m.hero.imageAlt)}" width="900" height="1125" fetchpriority="high" decoding="async">
-<a class="hero__badge" href="#avis" style="text-decoration:none"><strong>${fr1(avis.etablissements[e.slug].google.note)}</strong><span>${starsHtml(avis.etablissements[e.slug].google.note)}<br>${frInt(st.total)} avis Google, PagesJaunes et Planity</span></a></div>
-</div></section>
+${MH.hero(e, m)}
 
 <div class="wrap"><div class="atouts">${m.atouts.map(([t, d]) => `<div class="reveal"><h3>${esc(t)}</h3><p>${esc(d)}</p></div>`).join('')}</div></div>
 
 ${avisModule(e)}
 
-<section class="sec sec--alt" id="prestations" aria-labelledby="presta-t"><div class="wrap">
-<div class="sec__head reveal"><div><span class="kicker">${esc(m.accroche)}</span><h2 id="presta-t">Nos prestations</h2></div><p>Prix et durées relevés sur notre page de réservation Planity. Chaque prestation est détaillée sur sa page.</p></div>
-<div class="cards">${m.services.map((s, i) => `<a class="card reveal" href="${s.lien.startsWith('#') ? s.lien : base + s.lien}"><span class="card__n">0${i + 1}</span><span class="card__go">${I.arrow}</span><h3>${esc(s.titre)}</h3><p>${esc(s.texte)}</p><span class="card__foot"><span class="card__prix">${esc(s.prix)}</span><span class="card__duree">${esc(s.duree)}</span></span></a>`).join('')}</div>
-</div></section>
+${MH.presta(e, m, base)}
 
 <section class="sec" id="tarifs" aria-labelledby="tarifs-t"><div class="wrap">
 <div class="sec__head reveal"><div><span class="kicker">Tarifs</span><h2 id="tarifs-t">Nos tarifs</h2></div></div>
@@ -269,11 +255,7 @@ ${avisModule(e)}
 <aside class="tarifs-aside reveal"><h3>Réservez votre créneau</h3><p class="muted">Choisissez votre prestation et votre horaire en ligne, confirmation immédiate et paiement au salon.</p><div class="btns"><a class="btn" href="${e.planity}" target="_blank" rel="noopener" ${track('planity', e.slug, ' data-emplacement="tarifs"')}>${I.cal} Réserver en ligne</a><a class="btn btn--ghost" href="tel:${e.telephone_e164}" ${track('telephone', e.slug, ' data-emplacement="tarifs"')}>${I.phone} Appeler</a></div></aside></div>
 </div></section>
 
-<section class="sec sec--alt" id="realisations" aria-labelledby="real-t"><div class="wrap">
-<div class="sec__head reveal"><div><span class="kicker">Réalisations</span><h2 id="real-t">Le travail du salon</h2></div><p>Photos de réalisations publiées par le salon.</p></div>
-<div class="galerie">${m.galerie.map(([src, alt], i) => `<figure class="reveal"><img src="${src}" alt="${esc(alt)}" loading="lazy" decoding="async" width="600" height="${i % 6 === 0 ? 800 : 600}"></figure>`).join('')}</div>
-${m.equipe ? `<p class="muted" style="margin-top:1.8rem">L’équipe : ${m.equipe.map(esc).join(', ')}.</p>` : ''}
-</div></section>
+${MH.real(e, m)}
 
 <section class="sec" id="faq" aria-labelledby="faq-t"><div class="narrow">
 <div class="reveal"><span class="kicker">Questions fréquentes</span><h2 id="faq-t">Vos questions</h2></div>
@@ -294,7 +276,7 @@ ${footer(e, m, base)}`;
     const svc = { '@context': 'https://schema.org', '@type': 'Service', name: pg.h1, serviceType: pg.fil, description: pg.description, provider: { '@id': e.domaine + '/#etablissement' }, areaServed: { '@type': 'City', name: 'Rouen' }, url: canonical(e.slug, pg.slug + '/') };
     const tems = (avis.temoignages[e.slug] || []).slice(0, 3);
     const html = `${head({ title: pg.title, description: pg.description, slug: e.slug, p: pg.slug + '/', theme: m.theme, css: base + 'assets/site.css', ogImage: pg.image[0], schema: [bizSchema, svc, faqSchema(pg.faq), crumbSchema(crumbs)] })}
-<body>
+<body class="b-${e.slug}">
 ${header(e, base, false)}
 <main id="main">
 <div class="wrap"><nav class="crumbs" aria-label="Fil d’Ariane"><a href="${base}">${esc(e.nom)}</a> / <span aria-current="page">${esc(pg.fil)}</span></nav>
@@ -340,6 +322,8 @@ const llms = (e, m) => `# ${e.nom}\n\n> ${m.seo.description}\n\n- Adresse : ${e.
 
 /* ---------- site groupe ---------- */
 const { GT, groupHeader, groupFooter, buildGroupe } = makeGroupe({ PROD, ROOT, fs, path, write, OUT, themeVars, baseCss, appJs, stats, ETS, G, head, esc, fr1, frInt, dateFr, starsHtml, LOGO_PLAT, PLAT, PLATS, platUrl, track, I, temoin, horairesList, faqHtml, mapsUrl, siteHref, businessSchema, marques, faqSchema, crumbSchema, sitemap, avis, VERSION });
+
+const MH = makeMarqueHome({ esc, fr1, frInt, I, track, starsHtml, avis, stats });
 
 /* ---------- 404 + en-têtes ---------- */
 function build404() {
